@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="input" cols="30" rows="10" onkeyup="bereken();">
+        hallo
+    </textarea>
+    
+    <button onclick="upperCase();">To Uppercase</button>
+    <button onclick="lowerCase();">To Lowercase</button>
+
+    <script>
+        var tekst = document.querySelector("#input");
+        
+
+        function bereken(){
+            var waarde = tekst.value;
+            // aantal letters
+            console.log("Aantal letters: " + waarde.length);
+
+            // aantal woorden
+            var aantalWaarde = waarde.split(" ");
+            var aantalWoorden = aantalWaarde.length;
+            console.log("Aantal woorden: " + aantalWoorden);
+
+            // laatste woord
+            var laatsteWoord = aantalWaarde[aantalWaarde.length - 1];
+            console.log("Laatste woord: " + laatsteWoord);
+            // syntra aanwezig
+            var string = "syntra";
+            if(waarde.indexOf(string) != -1){
+                console.log("Syntra true");
+            }
+            else{
+                console.log("Syntra false");
+            }
+        }
+        // In hoofdletters en kleine letters
+        function upperCase(){
+            waarde.toUpperCase();
+        }
+        function lowerCase(){
+            waarde.toLowerCase();
+        }
+    </script>
+</body>
+</html>
